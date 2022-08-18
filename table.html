@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables in Html</title>
+    <style>
+      tfoot {
+        text-align: center;
+      }
+      tfoot td {
+        border: 1px solid black;
+      }
+      th {
+        padding: 10px;
+      }
+      tbody td {
+        padding-left: 15px;
+      }
+      table {
+        border: 1px solid black;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      .student-info {
+        display: flex;
+        justify-content: center;
+      }
+
+      .framework {
+        display: flex;
+        justify-content: space-around;
+      }
+      .framework table {
+        width: 500px;
+      }
+
+      .framework > table th {
+        border: 1px solid green;
+
+        border-collapse: collapse;
+      }
+      .framework > table td {
+        border: 1px solid green;
+      }
+      .framework > table caption {
+        border: 1px dotted green;
+        color: tomato;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h2>HTML Tables</h2>
+    </center>
+
+    <h3>1.Simple HTML Table</h3>
+
+    <div class="student-info">
+      <table>
+        <caption>
+          Studtent's Subject marks
+        </caption>
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>English</th>
+            <th>Physics</th>
+            <th>General Knowledge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>David</td>
+            <td>85</td>
+            <td>87</td>
+            <td>88</td>
+            <td>92</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td>Richard</td>
+            <td>91</td>
+            <td>81</td>
+            <td>78</td>
+            <td>71</td>
+            <td>74</td>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>81</td>
+            <td>86</td>
+            <td>88</td>
+            <td>84</td>
+            <td>92</td>
+          </tr>
+          <tr>
+            <td>Tony</td>
+            <td>56</td>
+            <td>86</td>
+            <td>86</td>
+            <td>75</td>
+            <td>93</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">Total marks obtained by students out of 100.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <h3>2.HTML Table Borders</h3>
+    <div class="framework">
+      <table>
+        <caption>
+          The Three Most Popular JavaScript Libraries
+        </caption>
+        <thead>
+          <tr>
+            <th>Library</th>
+            <th>jQuery</th>
+            <th>Bootstrap</th>
+            <th>Modernizr</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Market Share</td>
+            <td>96.1%</td>
+            <td>17.0%</td>
+            <td>14.3%</td>
+          </tr>
+          <tr>
+            <td>Absolute Usage</td>
+            <td>70.4%</td>
+            <td>12.4%</td>
+            <td>10.5%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              Market Share refers to the percentage of sites using any
+              JavaScript library that use the specified library. Absolute Usage
+              is the percent of websites surveyed, including those that use no
+              JavaScript libraries, that use the specified library.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
