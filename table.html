@@ -23,6 +23,9 @@
         text-align: center;
         border-collapse: collapse;
       }
+      tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
       .student-info {
         display: flex;
         justify-content: center;
@@ -49,6 +52,35 @@
         color: tomato;
         font-weight: bold;
       }
+      .primary {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .primary table {
+        width: 500px;
+        
+      }
+
+      .primary > table th {
+        border: 1px solid black;
+        color:whitesmoke;
+        background-color: tomato;
+
+        border-collapse: collapse;
+      }
+      .primary > table td {
+        border: 1px solid black;
+        
+       
+      }
+      .secondary{
+        background-color:black !important;
+      }
+
+     .primary tbody > tr:hover {
+  background-color: #ffc107;
+}
     </style>
   </head>
   <body>
@@ -61,7 +93,7 @@
     <div class="student-info">
       <table>
         <caption>
-          Studtent's Subject marks
+          Studtent's Marksheet
         </caption>
 
         <thead>
@@ -152,6 +184,67 @@
               JavaScript libraries, that use the specified library.
             </td>
           </tr>
+        </tfoot>
+      </table>
+    </div>
+    <h3>3.Cell and Row Spanning</h3>
+
+    <div class="primary">
+      <table>
+        <caption>
+           A summary of top sites with both paid and free course
+        </caption>
+        <thead>
+          <tr>
+            <th class="secondary">Websites</th>
+            <th>Certification</th>
+            <th>Tuition</th>
+            <th>Top Courses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">FreeCodeCamp</td>
+            <td>Yes</td>
+            <td>Free</td>
+            <td>Web Development </td>
+           
+            <tr>
+                <td>Yes</td>
+                <td>Free</td>
+                <td>Graphic design</td>
+            </tr>
+          </tr>
+          <tr>
+            <td rowspan="2">Udemy</td>
+            <td>Yes</td>
+            <td>Paid</td>
+            <td> Machine Learning </td>
+            <tr>
+                <td>Yes</td>
+                <td>Free</td>
+                <td>Mobile Development</td>
+            </tr>
+          </tr>
+        
+          <tr>
+            <td rowspan="2">Coursera</td>
+            <td>Yes</td>
+            <td>Free & Paid</td>
+            <td> IoT and AI</td>
+            <tr>
+                <td>Yes</td>
+                <td>Free</td>
+                <td>Software Development</td>
+            </tr>
+          </tr>
+          
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><em>Happy Learning !</em></td>
+                <td colspan="2"><em>Happy Coding!</em></td>
+            </tr>
         </tfoot>
       </table>
     </div>
